@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --height: 85vh;
+  --width: calc(var(--height) * (430/932)); 
+  --relFactor: 0.85;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.mainScreen {
+  height: var(--height);
+  width: var(--width);
+  background-color: #32a08d;
+  border: none;
+  overflow: hidden;
+}
+
+.logo {
+  background-color: #F6F5F5;
+  width: calc(var(--width) * (92/403));
+  height: calc(var(--height) * (43/932));
+  margin-top: calc(var(--height) * (24/932));
+  border-radius: 8px;
+  font-size: 2vh;
+  text-align: center;
+  color: #32a08d;
+}
+.homeBtn {
+  background-color: #F6F5F5;
+  width: calc(var(--width) * (70/403));
+  height: calc(var(--height) * (70/932));
+  margin-top: calc(var(--height) * (10/932));
+}
+
+.btn {
+  width: calc(var(--width) * (55/403));
+  height: calc(var(--height) * (55/932));
+  margin-left: 3px;
+  
+}
+
+.sendBtn {
+
+  background-color: #38DF85;
+}
+
+.doctorBtn {
+  background-color: #179B9B;
+}
+
+.message {
+  color: #F6F5F5;
+  max-width: 90%;
+}
+
+.userMessage {
+  background-color: #33AE99;
+}
+.replyMessage {
+  background-color: #32a08d;
+  position: relative;
+}
+.botPB {
+  position: absolute;
+  background-color: black;
+  width: calc(var(--width) * (28/403));
+  height: calc(var(--height) * (28/932));
+  bottom: 0px; 
+  right: -8px;
+  border-radius: 50%;
+}
+
+
+.layerScreen {
+  background-color: #F6F5F5;
+  width: var(--width);
+  height: calc(var(--height) * (751/932));
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+
+.textarea {
+  width: calc(var(--width) * (334/403)); 
+  height: calc(var(--height) * (128/932));
+  background-color: #33AE99; 
+  color: #F6F5F5;
+  
+}
+
+.textarea:focus {
+  outline: none;
+}
+.textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #F6F5F5;
+}
+.textarea::-moz-placeholder { /* Firefox 19+ */
+  color: #F6F5F5;
+}
+.textarea:-ms-input-placeholder { /* IE 10+ */
+  color: #F6F5F5;
+}
+.textarea:-moz-placeholder { /* Firefox 18- */
+  color: #F6F5F5;
+}
+/* Total width */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Background of the scrollbar except button or resizer */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+/* Scrollbar handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Scrollbar handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {color: black; text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {text-shadow:
+      .25em 0 0 black,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {text-shadow:
+      .25em 0 0 black,
+      .5em 0 0 black;}
+}
+
+.typing-indicator span {
+  animation: dots 1s steps(5, end) infinite;
+}
+
+.typing-indicator {
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: #555;
+  padding-left: 2px;
+}
+
+
+
+
