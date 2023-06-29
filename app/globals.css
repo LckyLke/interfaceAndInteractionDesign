@@ -43,6 +43,10 @@
   height: calc(var(--height) * (70/932));
   margin-top: calc(var(--height) * (10/932));
 }
+.newBtn {
+    background-color: #F6F5F5;
+    color: #32A08D;
+}
 
 .btn {
   width: calc(var(--width) * (55/403));
